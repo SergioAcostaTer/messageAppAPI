@@ -3,7 +3,7 @@ const friendListSchema = require("../models/friendListSchema");
 
 const router = express.Router();
 
-router.post("/friends/get/:username", async (req, res) => {
+router.get("/friends/get/:username", async (req, res) => {
   const { username } = req.params;
   let matchFriendList = await friendListSchema
     .find({ user: username })
