@@ -10,7 +10,7 @@ POST http://localhost:666/api/post/Paula/Daniel
 Content-Type: application/json
 
 {
-    "message": "Sergio eres el mejor y te chupo toda la verga <3"
+    "message": "Sergio eres el mejor y te chupo toda la verga <3 "
 }
 ###
 POST http://localhost:666/api/friends/add/Sergio/Hitler
