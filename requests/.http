@@ -1,0 +1,27 @@
+GET http://localhost:666/api/
+###
+
+POST http://localhost:666/api/adduser/Sergio/Pollademon0*
+###
+
+GET http://localhost:666/api/checkuser/Sergio/Pollademon0*
+###
+
+GET http://localhost:666/api/get/Paula/Daniel
+
+POST http://localhost:666/api/post/Paula/Daniel
+Content-Type: application/json
+
+{
+    "message": "Sergio eres el mejor y te chupo toda la verga <3"
+}
+###
+
+POST http://localhost:666/api/friends/add/Sergio/Hitler
+###
+
+POST http://localhost:666/api/friends/remove/Sergio/Hitler
+
+###
+
+
