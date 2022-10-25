@@ -40,5 +40,5 @@ app.use("/api", removeFriend); // /friends/remove/<username>/<friend> => status:
 //server PORT
 app.listen(
   process.env.PORT || PORT,
-  console.log(`Server running on ${process.env.PORT || PORT}`)
+  console.log("Server running in " + process.env.PORT || PORT)
 );
