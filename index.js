@@ -11,6 +11,8 @@ const postMessage = require("./routes/postMessage");
 const getConversation = require("./routes/getConversation");
 const addFriend = require("./routes/addFriend");
 const removeFriend = require("./routes/removeFriend");
+const getFriends = require("./routes/getFriends");
+
 
 //dotenv config
 require("dotenv").config();
@@ -36,6 +38,7 @@ app.use("/api", postMessage); // /post/<username>/<receiver> & body: {message: <
 app.use("/api", getConversation); // /get/<username>/<receiver> => messages of <username> and <receiver>
 app.use("/api", addFriend); // /friends/add/<username>/<friend> => status: String, user: String, friends: Array
 app.use("/api", removeFriend); // /friends/remove/<username>/<friend> => status: String, user: String, friends: Array
+app.use("/api", getFriends); // /friends/remove/<username>/<friend> => status: String, user: String, friends: Array
 
 //server PORT
 app.listen(
