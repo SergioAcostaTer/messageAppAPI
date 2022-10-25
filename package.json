@@ -4,9 +4,9 @@
   "description": "A message app",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "dev": "nodemon index.js",
-    "start": "node index.js"
-
+    "test": "nodemon index.js"
   },
   "keywords": [
     "message",
