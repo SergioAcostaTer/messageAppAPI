@@ -1,14 +1,11 @@
 GET http://localhost:666/api/
 ###
-
 POST http://localhost:666/api/adduser/Sergio/Pollademon0*
 ###
-
 GET http://localhost:666/api/checkuser/Sergio/Pollademon0*
 ###
-
-GET http://localhost:666/api/get/Paula/Daniel
-
+GET http://localhost:666/api/get/date/Paula/Sergio
+###
 POST http://localhost:666/api/post/Paula/Daniel
 Content-Type: application/json
 
@@ -16,23 +13,19 @@ Content-Type: application/json
     "message": "Sergio eres el mejor y te chupo toda la verga <3"
 }
 ###
-
 POST http://localhost:666/api/friends/add/Sergio/Hitler
 ###
-
 POST http://localhost:666/api/friends/remove/Sergio/Hitler
-
 ###
 
+# GET https://chat-sergio-app.herokuapp.com/api/get/Sergio/Daniel
 
-GET https://chat-sergio-app.herokuapp.com/api/get/Sergio/Daniel
+# ###
+# POST https://chat-sergio-app.herokuapp.com/api/friends/add/Sergio/Franco
 
-###
-POST https://chat-sergio-app.herokuapp.com/api/friends/add/Sergio/Franco
+# ###
 
-###
+# GET https://chat-sergio-app.herokuapp.com/api/friends/get/Sergio
 
-GET https://chat-sergio-app.herokuapp.com/api/friends/get/Sergio
-
-###
-GET https://chat-sergio-app.herokuapp.com/api/checkuser/Sergio/Pollademon0*
+# ###
+# GET https://chat-sergio-app.herokuapp.com/api/checkuser/Sergio/Pollademon0*

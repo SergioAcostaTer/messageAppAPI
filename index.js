@@ -12,7 +12,7 @@ const getConversation = require("./routes/getConversation");
 const addFriend = require("./routes/addFriend");
 const removeFriend = require("./routes/removeFriend");
 const getFriends = require("./routes/getFriends");
-
+const getLastMessageDate = require("./routes/getLastMessageDate");
 
 //dotenv config
 require("dotenv").config();
@@ -32,13 +32,18 @@ mongoose
 app.get("/api", (req, res) => {
   res.send("Welcome to MessagaApp");
 });
-app.use("/api", addUser); // /adduser/<username>/<password> => user: String, password: String
-app.use("/api", checkUser); // /checkuser/<username>/<password> => status: Boolean, user: String, password: String
-app.use("/api", postMessage); // /post/<username>/<receiver> & body: {message: <message>} => user: String, receiver: String, message: String, date: new Date()
-app.use("/api", getConversation); // /get/<username>/<receiver> => messages of <username> and <receiver>
-app.use("/api", addFriend); // /friends/add/<username>/<friend> => status: String, user: String, friends: Array
-app.use("/api", removeFriend); // /friends/remove/<username>/<friend> => status: String, user: String, friends: Array
-app.use("/api", getFriends); // /friends/remove/<username>/<friend> => status: String, user: String, friends: Array
+
+//USERS
+app.use("/api", addUser); //POST /adduser/<username>/<password> => user: String, password: String
+app.use("/api", checkUser); //GET /checkuser/<username>/<password> => status: Boolean, user: String, password: String
+//MESSAGES
+app.use("/api", postMessage); //POST /post/<username>/<receiver> & body: {message: <message>} => user: String, receiver: String, message: String, date: new Date()
+app.use("/api", getConversation); //GET /get/<username>/<receiver> => messages of <username> and <receiver>
+//FRIENDS
+app.use("/api", addFriend); //POST /friends/add/<username>/<friend> => status: String, user: String, friends: Array
+app.use("/api", removeFriend); //GET /friends/remove/<username>/<friend> => status: String, user: String, friends: Array
+app.use("/api", getFriends); //GET /friends/remove/<username>/<friend> => status: String, user: String, friends: Array
+app.use("/api", getLastMessageDate); //GET /friends/remove/<username>/<friend> => status: String, user: String, friends: Array
 
 //server PORT
 app.listen(
