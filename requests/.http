@@ -1,6 +1,6 @@
 GET http://localhost:666/api/
 ###
-POST http://localhost:666/api/adduser/ronaldo7/Pollademon0*
+POST http://localhost:666/api/adduser/Dammer/Pollademon0*
 ###
 
 POST http://localhost:666/api/friends/add/ronaldo7/messi10
@@ -42,7 +42,12 @@ POST https://chat-sergio-app.herokuapp.com/api/adduser/konerak/28262225
 
 # ###
 # GET https://chat-sergio-app.herokuapp.com/api/checkuser/Sergio/Pollademon0*
-POST http://localhost:666/api/friends/request/Paco/Sergio
+POST http://localhost:666/api/friends/request/Sergio/Paula
+
 ###
 
-POST http://localhost:666/api/friends/add/Pistolo/Binoculo
+POST http://localhost:666/api/friends/add/Jeff/Dammer
+
+###
+GET http://localhost:666/api/friends/request/get/Paula
+
