@@ -9,7 +9,7 @@ router.post("/friends/request/remove/:username/:friend", async (req, res) => {
     .find({ user: username })
     .select("-_id -__v");
 
-  const filter = { username };
+  const filter = { user:username };
   const filtered = matchFriendList[0].friendsRequests.filter(
     (name) => name != friend
   );

@@ -42,7 +42,7 @@ POST https://chat-sergio-app.herokuapp.com/api/adduser/konerak/28262225
 
 # ###
 # GET https://chat-sergio-app.herokuapp.com/api/checkuser/Sergio/Pollademon0*
-POST http://localhost:666/api/friends/request/Daniel/Sergio
+POST http://localhost:666/api/friends/request/messi/Sergio
 
 ###
 
