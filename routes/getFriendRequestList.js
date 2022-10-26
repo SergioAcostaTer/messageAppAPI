@@ -13,7 +13,7 @@ router.get("/friends/request/get/:username", async (req, res) => {
     res.json(matchFriendList[0].friendsRequests)
   }
   if (!matchFriendList[0]) {
-    res.json({status: "Doesn't exist"})
+    // res.json({status: "Doesn't exist"})
   }
 });
 
