@@ -1,5 +1,7 @@
 const express = require("express");
 const userSchema = require("../models/userSchema");
+const friendListSchema = require("../models/friendListSchema");
+
 
 const router = express.Router();
 
@@ -11,10 +13,17 @@ router.post("/adduser/:username/:password", (req, res) => {
     user: username,
     password: password,
   });
-
   user.save();
 
-  res.json(user);
+  const friendList = friendListSchema({
+    user: username
+  });
+  friendList.save()
+
+  console.log(friendList)
+
+
+  res.json({status: true});
 });
 
 module.exports = router;

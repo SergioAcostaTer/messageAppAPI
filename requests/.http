@@ -1,6 +1,9 @@
 GET http://localhost:666/api/
 ###
-POST http://localhost:666/api/adduser/Sergio/Pollademon0*
+POST http://localhost:666/api/adduser/ronaldo7/Pollademon0*
+###
+
+POST http://localhost:666/api/friends/add/ronaldo7/messi10
 ###
 GET http://localhost:666/api/checkuser/Sergio/Pollademon0*
 ###
@@ -15,17 +18,31 @@ Content-Type: application/json
 ###
 POST http://localhost:666/api/friends/add/Sergio/Hitler
 ###
+
 POST http://localhost:666/api/friends/remove/Sergio/Hitler
 ###
 
 # GET https://chat-sergio-app.herokuapp.com/api/get/Sergio/Daniel
 
 # ###
-POST https://chat-sergio-app.herokuapp.com/api/friends/add/Sergio/SantiAbascal
+POST https://chat-sergio-app.herokuapp.com/api/friends/add/Paula/Sergio
 
-# ###
+###
+POST https://chat-sergio-app.herokuapp.com/api/post/Sergio/Paula
+Content-Type: application/json
 
+{
+    "message": "Holaaa"
+}
+###
+POST https://chat-sergio-app.herokuapp.com/api/adduser/konerak/28262225
+
+###
 # GET https://chat-sergio-app.herokuapp.com/api/friends/get/Sergio
 
 # ###
 # GET https://chat-sergio-app.herokuapp.com/api/checkuser/Sergio/Pollademon0*
+POST http://localhost:666/api/friends/request/Paco/Sergio
+###
+
+POST http://localhost:666/api/friends/add/Pistolo/Binoculo

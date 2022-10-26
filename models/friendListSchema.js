@@ -11,6 +11,10 @@ const friendListSchema = mongoose.Schema({
     type: Array,
     default: []
   },
+  friendsRequests: {
+    type: Array,
+    default: []
+  },
 });
 
 module.exports = mongoose.model("friend", friendListSchema);

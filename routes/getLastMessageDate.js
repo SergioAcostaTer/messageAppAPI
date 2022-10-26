@@ -5,6 +5,12 @@ const router = express.Router();
 
 router.get("/get/date/:username/:receiver", async (req, res) => {
   const { username, receiver } = req.params;
+  const { friends } = req.body;
+
+  let objectDates = []
+
+  // friends.map(name => {objectDates.push(name:)})
+
 
   const messageMatch = await messageSchema
     .find({
