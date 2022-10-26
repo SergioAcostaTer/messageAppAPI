@@ -21,7 +21,7 @@ POST http://localhost:666/api/friends/remove/Sergio/Hitler
 # GET https://chat-sergio-app.herokuapp.com/api/get/Sergio/Daniel
 
 # ###
-# POST https://chat-sergio-app.herokuapp.com/api/friends/add/Sergio/Franco
+POST https://chat-sergio-app.herokuapp.com/api/friends/add/Sergio/SantiAbascal
 
 # ###
 

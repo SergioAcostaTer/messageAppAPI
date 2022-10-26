@@ -17,8 +17,12 @@ router.get("/get/date/:username/:receiver", async (req, res) => {
     .limit(1)
     .select("date -_id");
 
-
-  res.json(messageMatch[0].date);
+    if(messageMatch[0]){
+      res.json(messageMatch[0].date);
+    }
+    if(!messageMatch[0]){
+      res.json("0");
+    }
 });
 
 module.exports = router;
