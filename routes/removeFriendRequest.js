@@ -9,15 +9,17 @@ router.post("/friends/request/remove/:username/:friend", async (req, res) => {
     .find({ user: username })
     .select("-_id -__v");
 
-  const filter = { user:username };
+  const filter = { user: username };
   const filtered = matchFriendList[0].friendsRequests.filter(
     (name) => name != friend
   );
-  const update = { friendRequests: filtered };
+  const update = { friendsRequests: [...filtered] };
 
-  await friendListSchema.findByIdAndUpdate(filter, update);
+  await friendListSchema.findOneAndUpdate(filter, update);
 
-  res.json({status:true});
+  // const what = await friendListSchema.find({user: username})
+
+  res.json(update);
 });
 
 module.exports = router;

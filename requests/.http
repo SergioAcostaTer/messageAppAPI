@@ -52,6 +52,6 @@ POST http://localhost:666/api/friends/add/Jeff/Dammer
 GET http://localhost:666/api/friends/request/get/Paula
 ###
 
-POST http://localhost:666/api/friends/request/remove/Sergio/get
+POST http://localhost:666/api/friends/request/remove/Sergio/messi
 
 
