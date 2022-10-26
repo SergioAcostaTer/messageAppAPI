@@ -15,6 +15,7 @@ const getFriends = require("./routes/getFriends");
 const getLastMessageDate = require("./routes/getLastMessageDate");
 const sendFriendRequest = require("./routes/sendFriendRequest");
 const getFriendRequestList = require("./routes/getFriendRequestList");
+const removeFriendRequest = require("./routes/removeFriendRequest");
 
 //dotenv config
 require("dotenv").config();
@@ -48,6 +49,7 @@ app.use("/api", getFriends); //GET /friends/remove/<username>/<friend> => status
 app.use("/api", getLastMessageDate); //GET /friends/remove/<username>/<friend> => status: String, user: String, friends: Array
 app.use("/api", sendFriendRequest); //GET /friends/remove/<username>/<friend> => status: String, user: String, friends: Array
 app.use("/api", getFriendRequestList); //GET /friends/remove/<username>/<friend> => status: String, user: String, friends: Array
+app.use("/api", removeFriendRequest); //GET /friends/remove/<username>/<friend> => status: String, user: String, friends: Array
 
 //server PORT
 app.listen(
