@@ -12,11 +12,12 @@ router.post("/adduser/:username/:password", (req, res) => {
     user: username,
     password: password,
   });
+  user.save();
+
   const friendList = friendListSchema({
     user: username,
   });
 
-  user.save();
   friendList.save();
 
   res.json({ status: true });
