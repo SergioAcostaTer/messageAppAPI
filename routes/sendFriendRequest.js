@@ -8,23 +8,23 @@ router.post("/friends/request/:username/:friend", async (req, res) => {
 
   const filter = { user: friend };
   const match = await friendListSchema.find(filter);
-  console.log(match[0].friendsRequests);
+  // console.log(match[0].friendsRequests);
 
   if (match[0]) {
     if (match[0].friends.includes(username)) {
-    
-
+      console.log(match[0]);
       res.json({ state: false });
     }
-    
-    if (!match[0].friendsRequests.includes(username)) {
-      const update = {
-        friendsRequests: [...match[0].friendsRequests, username],
-      };
+    if (!match[0].friends.includes(username)) {
+      if (!match[0].friendsRequests.includes(username)) {
+        const update = {
+          friendsRequests: [...match[0].friendsRequests, username],
+        };
 
-      await friendListSchema.findOneAndUpdate(filter, update);
+        await friendListSchema.findOneAndUpdate(filter, update);
 
-      res.json({ state: true });
+        res.json({ state: true });
+      }
     }
   }
   if (!match[0]) {

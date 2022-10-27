@@ -49,7 +49,7 @@ POST http://localhost:666/api/friends/request/konerak/Sergio
 POST http://localhost:666/api/friends/add/Jeff/Dammer
 
 ###
-POST http://localhost:666/api/friends/request/ñengo/Sergio
+POST http://localhost:666/api/friends/request/Paula/Sergio
 ###
 
 POST http://localhost:666/api/friends/request/remove/Sergio/messi
